@@ -19,11 +19,30 @@ console.log('JS OK');
         calcola il prezzo finale standard 
  - e mostra all'utente il prezzo finale
         
-
-     
-
-
-
 */
+
+const km = prompt('inserisci i chilometri da percorrere', '5');
+console.log(km);
+
+const eta = prompt('inserisci la tua eta', '5');
+console.log(eta);
+
+const prezzochilometro = 0.21;
+console.log(prezzochilometro);
+
+const prezzofinale = km * prezzochilometro;
+console.log(prezzofinale);
+
+const sconto20 = prezzofinale - (((prezzofinale) / 100) * 20);
+console.log(sconto20);
+
+const sconto40 = prezzofinale - (((prezzofinale) / 100) * 40);
+console.log(sconto40);
+
+
+
+
+
+
 
 
