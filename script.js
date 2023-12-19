@@ -30,14 +30,34 @@ console.log(eta);
 const prezzochilometro = 0.21;
 console.log(prezzochilometro);
 
-const prezzofinale = km * prezzochilometro;
+let prezzofinale = km * prezzochilometro;
 console.log(prezzofinale);
 
-const sconto20 = prezzofinale - (((prezzofinale) / 100) * 20);
+const sconto20 = (((prezzofinale) / 100) * 20);
 console.log(sconto20);
 
-const sconto40 = prezzofinale - (((prezzofinale) / 100) * 40);
+const sconto40 = (((prezzofinale) / 100) * 40);
 console.log(sconto40);
+
+
+if (eta < 18){
+    prezzofinale = prezzofinale - sconto20;
+
+}
+else if (eta > 65){
+    prezzofinale = prezzofinale - sconto40;
+
+} 
+
+prezzofinale = prezzofinale.toFixed(2);
+
+
+
+
+console.log(prezzofinale);
+document.getElementById("risposta").innerHTML = `Il prezzo finale è ${prezzofinale}`;
+
+
 
 
 
